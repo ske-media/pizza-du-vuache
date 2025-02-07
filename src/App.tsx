@@ -1,13 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Distributor from './components/Distributor';
 import PizzaSizes from './components/PizzaSizes';
 import PizzaMenu from './components/PizzaMenu';
-import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
+
+// Import direct pour éviter les problèmes de lazy loading
+import Testimonials from './components/Testimonials';
+const Footer = lazy(() => import('./components/Footer'));
 
 function App() {
   useEffect(() => {
@@ -41,8 +43,10 @@ function App() {
         <PizzaSizes />
         <Testimonials />
         <Contact />
+        <Suspense fallback={null}>
+          <Footer />
+        </Suspense>
       </main>
-      <Footer />
     </div>
   );
 }

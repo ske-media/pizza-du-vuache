@@ -14,10 +14,15 @@ const Hero = () => {
       </div>
       
       <div className="relative z-10 text-center px-4 sm:px-6 fade-in max-w-[90vw] sm:max-w-none">
-        <img 
-          src="https://i.imgur.com/2N5Sr9x.png" 
+        <img
+          src="https://i.imgur.com/2N5Sr9x.png"
+          width="256"
+          height="128"
           alt="Pizza du Vuache - Meilleure Pizzeria à Valleiry" 
           className="h-20 sm:h-32 mx-auto mb-6 w-auto object-contain"
+          loading="eager"
+          fetchpriority="high"
+          decoding="sync"
         />
         <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
           Pizza du Vuache - Délicieuses pizzas artisanales à emporter à Valleiry

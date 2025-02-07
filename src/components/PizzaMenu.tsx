@@ -375,23 +375,25 @@ const PizzaMenu = () => {
   );
 
   const AllergenInfo = () => (
-    <div className={`fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center transition-opacity duration-300 ${showAllergens ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-      <div className="bg-white rounded-xl shadow-xl p-8 max-w-2xl w-full mx-4 relative">
+    <div className={`fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center transition-opacity duration-300 p-4 ${showAllergens ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+      <div className="bg-white rounded-xl shadow-xl p-6 sm:p-8 max-w-2xl w-full relative max-h-[90vh] overflow-y-auto">
         <button
           onClick={() => setShowAllergens(false)}
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-white rounded-full p-1 text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-colors"
         >
-          ✕
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
         </button>
-        <div className="text-center mb-6">
+        <div className="text-center mb-4 sm:mb-6">
           <AlertTriangle className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
-          <h3 className="text-2xl font-bold text-primary mb-2">Informations sur les Allergènes</h3>
+          <h3 className="text-xl sm:text-2xl font-bold text-primary mb-2">Informations sur les Allergènes</h3>
           <p className="text-gray-600">Informations importantes sur les allergènes présents dans nos pizzas :</p>
         </div>
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           <div className="bg-yellow-50 p-4 rounded-lg">
             <h4 className="font-semibold text-primary mb-2">Huile de Colza</h4>
-            <p className="text-gray-700">Présente dans toutes nos pâtes à pizza</p>
+            <p className="text-gray-700">Des traces peuvent être présentes dans nos pâtes à pizza</p>
           </div>
           
           <div className="bg-yellow-50 p-4 rounded-lg">
@@ -422,7 +424,7 @@ const PizzaMenu = () => {
             <p className="text-gray-700">Présentes uniquement dans la pizza Chèvre Miel</p>
           </div>
         </div>
-        <div className="mt-6 text-center text-sm text-gray-500">
+        <div className="mt-4 sm:mt-6 text-center text-sm text-gray-500">
           En cas d'allergie ou d'intolérance, veuillez nous en informer lors de votre commande. Notre équipe est à votre disposition pour vous conseiller.
         </div>
       </div>

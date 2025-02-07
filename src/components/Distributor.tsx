@@ -9,7 +9,7 @@ const Distributor = () => {
   useEffect(() => {
     // Précharger l'image pour vérifier qu'elle existe
     const img = new Image();
-    img.src = 'https://i.imgur.com/6xbWpMU.jpeg';
+    img.src = FALLBACK_IMAGE;
     img.onerror = () => setImageError(true);
   }, []);
 
@@ -27,16 +27,26 @@ const Distributor = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="fade-in">
-            <img
-              key={imageError ? 'fallback' : 'main'}
-              src={imageError ? FALLBACK_IMAGE : "https://i.imgur.com/6xbWpMU.jpeg"}
-              onError={(e) => {
-                console.error('Erreur de chargement de l\'image:', e);
-                setImageError(true);
-              }}
-              alt="Distributeur de pizzas"
-              className="rounded-xl shadow-2xl w-full object-cover aspect-[4/3]"
-            />
+            <picture>
+              <source
+                srcSet={imageError ? FALLBACK_IMAGE : FALLBACK_IMAGE}
+                type="image/jpeg"
+              />
+              <img
+                key={imageError ? 'fallback' : 'main'}
+                src={imageError ? FALLBACK_IMAGE : FALLBACK_IMAGE}
+                onError={(e) => {
+                  console.error('Erreur de chargement de l\'image:', e);
+                  setImageError(true);
+                }}
+                alt="Distributeur de pizzas Pizza du Vuache à Valleiry"
+                width="800"
+                height="600"
+                className="rounded-xl shadow-2xl w-full object-cover aspect-[4/3]"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
           </div>
           
           <div className="space-y-8 fade-in">
