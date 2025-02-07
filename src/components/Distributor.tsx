@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Clock, ChefHat, Flame, Sparkles, Timer } from 'lucide-react';
 
-const IMAGE_URL = "https://i.imgur.com/6xbWpMU.jpeg";
 const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80";
 
 const Distributor = () => {
@@ -10,7 +9,7 @@ const Distributor = () => {
   useEffect(() => {
     // Précharger l'image pour vérifier qu'elle existe
     const img = new Image();
-    img.src = IMAGE_URL;
+    img.src = 'https://i.imgur.com/6xbWpMU.jpeg';
     img.onerror = () => setImageError(true);
   }, []);
 
@@ -28,26 +27,16 @@ const Distributor = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="fade-in">
-            <picture>
-              <source
-                srcSet={imageError ? FALLBACK_IMAGE : IMAGE_URL}
-                type="image/jpeg"
-              />
-              <img
-                key={imageError ? 'fallback' : 'main'}
-                src={imageError ? FALLBACK_IMAGE : IMAGE_URL}
-                onError={(e) => {
-                  console.error('Erreur de chargement de l\'image:', e);
-                  setImageError(true);
-                }}
-                alt="Distributeur de pizzas Pizza du Vuache à Valleiry"
-                width="800"
-                height="600"
-                className="rounded-xl shadow-2xl w-full object-cover aspect-[4/3]"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
+            <img
+              key={imageError ? 'fallback' : 'main'}
+              src={imageError ? FALLBACK_IMAGE : "https://i.imgur.com/6xbWpMU.jpeg"}
+              onError={(e) => {
+                console.error('Erreur de chargement de l\'image:', e);
+                setImageError(true);
+              }}
+              alt="Distributeur de pizzas"
+              className="rounded-xl shadow-2xl w-full object-cover aspect-[4/3]"
+            />
           </div>
           
           <div className="space-y-8 fade-in">

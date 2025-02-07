@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Star, Quote } from 'lucide-react';
 
-const TESTIMONIALS = [
+const testimonials = [
   {
     name: "Praxa Phithak",
     text: "Excellentes pizzas, le personnel est très chaleureux!!! je visite tellement leur machine 24/24 qu'elle est devenue une membre de ma famille 😂",
@@ -43,17 +43,11 @@ const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  // Réinitialiser l'état quand le composant est monté
-  useEffect(() => {
-    setCurrentIndex(0);
-    setIsAutoPlaying(true);
-  }, []);
-
   useEffect(() => {
     let timer: NodeJS.Timeout;
     if (isAutoPlaying) {
       timer = setInterval(() => {
-        setCurrentIndex((prev) => (prev + 1) % TESTIMONIALS.length);
+        setCurrentIndex((prev) => (prev + 1) % testimonials.length);
       }, 5000);
     }
     return () => clearInterval(timer);
@@ -77,9 +71,9 @@ const Testimonials = () => {
         </div>
 
         <div className="relative">
-          <div className="max-w-4xl mx-auto relative">
+          <div className="max-w-4xl mx-auto">
             <div className="relative h-[400px] fade-in">
-              {TESTIMONIALS.map((testimonial, index) => (
+              {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
                   className={`absolute w-full transition-all duration-500 ${
@@ -87,7 +81,7 @@ const Testimonials = () => {
                       ? 'opacity-100 translate-x-0'
                       : index < currentIndex
                       ? 'opacity-0 -translate-x-full'
-                      : 'opacity-0 translate-x-full pointer-events-none'
+                      : 'opacity-0 translate-x-full'
                   }`}
                 >
                   <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10">
@@ -136,7 +130,7 @@ const Testimonials = () => {
             </div>
 
             <div className="flex justify-center mt-8 space-x-2">
-              {TESTIMONIALS.map((_, index) => (
+              {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => handleTestimonialClick(index)}
@@ -157,8 +151,6 @@ const Testimonials = () => {
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
               alt="Google Logo"
-              width="20"
-              height="20"
               className="w-5 h-5"
             />
             <span className="font-semibold text-gray-700">Note moyenne de 4,5/5 sur Google</span>

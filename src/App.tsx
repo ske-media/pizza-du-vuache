@@ -5,10 +5,10 @@ import About from './components/About';
 import Distributor from './components/Distributor';
 import PizzaSizes from './components/PizzaSizes';
 import PizzaMenu from './components/PizzaMenu';
-import Contact from './components/Contact';
 
-// Import direct pour éviter les problèmes de lazy loading
-import Testimonials from './components/Testimonials';
+// Lazy loading des composants non critiques
+const Testimonials = lazy(() => import('./components/Testimonials'));
+const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
 
 function App() {
@@ -41,9 +41,9 @@ function App() {
         <Distributor />
         <PizzaMenu />
         <PizzaSizes />
-        <Testimonials />
-        <Contact />
         <Suspense fallback={null}>
+          <Testimonials />
+          <Contact />
           <Footer />
         </Suspense>
       </main>

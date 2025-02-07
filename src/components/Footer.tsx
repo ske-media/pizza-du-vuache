@@ -9,20 +9,13 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Pizza du Vuache</h3>
             <p className="text-gray-300">
-              Depuis 2012, notre pizzeria artisanale au pied du Vuache vous propose plus de 40 pizzas 
-              authentiques préparées avec passion. Disponibles à emporter ou via notre distributeur 24h/24, 
-              nos pizzas sont devenues une référence à Valleiry et en Haute-Savoie.
+              Une expérience culinaire authentique au pied du Mont Vuache.
             </p>
           </div>
           
           <div>
             <h3 className="text-xl font-semibold mb-4">Liens rapides</h3>
             <ul className="space-y-2">
-              <li>
-                <a href="#hero" className="text-gray-300 hover:text-white transition-colors">
-                  Accueil
-                </a>
-              </li>
               <li>
                 <a href="#about" className="text-gray-300 hover:text-white transition-colors">
                   À propos
@@ -34,7 +27,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#distributor" className="text-gray-300 hover:text-white transition-colors">
+                <a href="#reservation" className="text-gray-300 hover:text-white transition-colors">
                   Réservation
                 </a>
               </li>
@@ -70,12 +63,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-          <p className="mb-2">&copy; {new Date().getFullYear()} Pizza du Vuache. Tous droits réservés.</p>
-          <p className="text-sm">
-            Pizzeria artisanale à Valleiry | Distributeur automatique 24h/24 | 
-            Livraison et vente à emporter | Tél : 04 50 38 67 98 | 
-            80 Route de Saint-Julien-en-Genevois, 74520 Valleiry
-          </p>
+          <p>&copy; {new Date().getFullYear()} Pizza du Vuache. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

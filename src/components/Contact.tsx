@@ -3,12 +3,12 @@ import { MapPin, Phone, Clock } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-secondary-light fade-in">
+    <section id="contact" className="py-20 bg-secondary-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-primary text-center mb-12">Contact</h2>
         
         <div className="grid md:grid-cols-2 gap-12">
-          <div>
+          <div className="fade-in">
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -51,7 +51,7 @@ const Contact = () => {
             </div>
           </div>
           
-          <div>
+          <div className="fade-in">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2763.914567837518!2d5.979987715796274!3d46.13383217911471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c269982e1e569%3A0x257c62057e41bce6!2s80%20Rte%20de%20Saint-Julien-en-Genevois%2C%2074520%20Valleiry%2C%20France!5e0!3m2!1sen!2sfr!4v1700000000000!5m2!1sen!2sfr%22width=%22600%22height=%22450"
               width="100%"
