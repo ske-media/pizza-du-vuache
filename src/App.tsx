@@ -1,18 +1,16 @@
-import React, { useEffect, lazy, Suspense } from 'react';
+import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Distributor from './components/Distributor';
 import PizzaSizes from './components/PizzaSizes';
 import PizzaMenu from './components/PizzaMenu';
-
-// Lazy loading des composants non critiques
-const Testimonials = lazy(() => import('./components/Testimonials'));
-const Contact = lazy(() => import('./components/Contact'));
-const Footer = lazy(() => import('./components/Footer'));
+import Testimonials from './components/Testimonials';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
-  useEffect(() => {
+  React.useEffect(() => {
     const observerCallback: IntersectionObserverCallback = (entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -41,11 +39,9 @@ function App() {
         <Distributor />
         <PizzaMenu />
         <PizzaSizes />
-        <Suspense fallback={null}>
-          <Testimonials />
-          <Contact />
-          <Footer />
-        </Suspense>
+        <Testimonials />
+        <Contact />
+        <Footer />
       </main>
     </div>
   );

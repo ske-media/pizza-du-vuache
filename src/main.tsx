@@ -1,8 +1,7 @@
-import { StrictMode } from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './App.tsx';
+import App from './App';
 import './index.css';
-import { lazy, Suspense } from 'react';
 
 // Fix pour la hauteur sur mobile
 const setVH = () => {
@@ -13,11 +12,6 @@ const setVH = () => {
 window.addEventListener('resize', setVH);
 window.addEventListener('orientationchange', setVH);
 setVH();
-
-// Lazy loading des composants non critiques
-const LazyTestimonials = lazy(() => import('./components/Testimonials'));
-const LazyContact = lazy(() => import('./components/Contact'));
-const LazyFooter = lazy(() => import('./components/Footer'));
 
 // Intersection Observer pour le lazy loading
 const observerCallback = (entries: IntersectionObserverEntry[]) => {
@@ -41,10 +35,14 @@ window.addEventListener('load', () => {
   document.querySelectorAll('img[data-src]').forEach(img => observer.observe(img));
 });
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <Suspense fallback={null}>
-      <App />
-    </Suspense>
-  </StrictMode>
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error('Failed to find the root element');
+}
+
+const root = createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );

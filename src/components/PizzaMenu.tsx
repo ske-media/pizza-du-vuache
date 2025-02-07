@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FileText, AlertTriangle } from 'lucide-react';
 
 // Types pour le typage strict
@@ -345,10 +345,10 @@ const menuData: MenuData = {
   ]
 };
 
-const PizzaMenu = () => {
-  const [activeTab, setActiveTab] = useState<'pizzas' | 'boissons' | 'desserts'>('pizzas');
-  const [activePizzaCategory, setActivePizzaCategory] = useState(menuData.pizzas[0].category);
-  const [showAllergens, setShowAllergens] = useState(false);
+const PizzaMenu: React.FC = () => {
+  const [activeTab, setActiveTab] = React.useState<'pizzas' | 'boissons' | 'desserts'>('pizzas');
+  const [activePizzaCategory, setActivePizzaCategory] = React.useState(menuData.pizzas[0].category);
+  const [showAllergens, setShowAllergens] = React.useState(false);
 
   const PizzaCard = ({ pizza }: { pizza: MenuItem }) => (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden">

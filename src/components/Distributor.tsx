@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Clock, ChefHat, Flame, Sparkles, Timer } from 'lucide-react';
 
 const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80";
 
-const Distributor = () => {
-  const [imageError, setImageError] = useState(false);
+const Distributor: React.FC = () => {
+  const [imageError, setImageError] = React.useState(false);
 
-  useEffect(() => {
-    // Précharger l'image pour vérifier qu'elle existe
+  React.useEffect(() => {
     const img = new Image();
     img.src = 'https://i.imgur.com/6xbWpMU.jpeg';
     img.onerror = () => setImageError(true);
@@ -30,10 +29,7 @@ const Distributor = () => {
             <img
               key={imageError ? 'fallback' : 'main'}
               src={imageError ? FALLBACK_IMAGE : "https://i.imgur.com/6xbWpMU.jpeg"}
-              onError={(e) => {
-                console.error('Erreur de chargement de l\'image:', e);
-                setImageError(true);
-              }}
+              onError={() => setImageError(true)}
               alt="Distributeur de pizzas"
               className="rounded-xl shadow-2xl w-full object-cover aspect-[4/3]"
             />
