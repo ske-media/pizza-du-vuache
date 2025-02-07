@@ -15,12 +15,12 @@ const About = () => {
           <div className="fade-in">
             <h2 className="text-3xl font-bold text-primary mb-6">Notre Histoire</h2>
             <p className="text-gray-700 mb-6">
-              Depuis 2012, Pizza du Vuache perpétue la tradition de la véritable pizza italienne au cœur de Valleiry.
+              Depuis 2012, Pizza du Vuache perpétue la tradition de la véritable pizza italienne au cœur de Valleiry. Notre pizzeria artisanale est devenue une référence incontournable dans la région.
               Notre passion pour la qualité et l'authenticité se retrouve dans chacune de nos créations culinaires.
             </p>
             <p className="text-gray-700 mb-6">
-              Chez Pizza du Vuache, nous cultivons un savoir-faire unique inspiré par l'esprit local et la tradition italienne.
-              Chaque pizza est réalisée avec passion et minutie, pour vous offrir une expérience authentique et inoubliable.
+              Chez Pizza du Vuache, nous cultivons un savoir-faire unique inspiré par l'esprit local du Mont Vuache et la tradition italienne.
+              Chaque pizza est réalisée avec passion et minutie dans notre pizzeria à Valleiry, pour vous offrir une expérience authentique et inoubliable.
             </p>
             <div className="grid grid-cols-3 gap-4 text-center">
               <div className="p-4 bg-white rounded-lg shadow-md">

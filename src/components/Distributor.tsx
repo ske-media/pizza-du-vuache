@@ -9,7 +9,7 @@ const Distributor = () => {
   useEffect(() => {
     // Précharger l'image pour vérifier qu'elle existe
     const img = new Image();
-    img.src = '/assets/andalouse.avif';
+    img.src = 'https://i.imgur.com/6xbWpMU.jpeg';
     img.onerror = () => setImageError(true);
   }, []);
 
@@ -21,7 +21,7 @@ const Distributor = () => {
             Notre Distributeur Automatique
           </h2>
           <p className="text-xl text-gray-600">
-            La même qualité, où que vous soyez ! 🍕
+            Pizza du Vuache disponible 24h/24 à Valleiry ! 🍕
           </p>
         </div>
 
@@ -29,7 +29,7 @@ const Distributor = () => {
           <div className="fade-in">
             <img
               key={imageError ? 'fallback' : 'main'}
-              src={imageError ? FALLBACK_IMAGE : "/assets/andalouse.avif"}
+              src={imageError ? FALLBACK_IMAGE : "https://i.imgur.com/6xbWpMU.jpeg"}
               onError={(e) => {
                 console.error('Erreur de chargement de l\'image:', e);
                 setImageError(true);
@@ -47,7 +47,7 @@ const Distributor = () => {
               <div>
                 <h3 className="text-xl font-semibold text-primary mb-2">Un savoir-faire maison</h3>
                 <p className="text-gray-600">
-                  Chaque pizza est élaborée à la main dans notre atelier, avec amour et passion, 
+                  Chaque pizza est élaborée à la main dans l'atelier de Pizza du Vuache, avec amour et passion, 
                   comme si vous la commandiez directement au comptoir.
                 </p>
               </div>
@@ -99,7 +99,7 @@ const Distributor = () => {
               La différence Pizza du Vuache
             </h3>
             <p className="text-gray-700 text-lg mb-8">
-              Nos pizzas du distributeur ne sont pas "juste des pizzas". 
+              Les pizzas du distributeur Pizza du Vuache ne sont pas "juste des pizzas". 
               Elles sont une expérience, le résultat de notre passion pour la bonne cuisine. 
               Goûtez la différence et laissez-vous séduire !
             </p>

@@ -63,10 +63,10 @@ const Testimonials = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-primary mb-4">
-            L'avis de nos clients
+            Avis clients Pizza du Vuache
           </h2>
           <p className="text-gray-600 text-lg">
-            Découvrez ce que nos clients pensent de nous sur Google
+            Découvrez ce que nos clients pensent de Pizza du Vuache sur Google
           </p>
         </div>
 

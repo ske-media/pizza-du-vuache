@@ -467,7 +467,7 @@ const PizzaMenu = () => {
   return (
     <section id="menu" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-primary text-center mb-12">Notre Carte</h2>
+        <h2 className="text-3xl font-bold text-primary text-center mb-12">La Carte de Pizza du Vuache</h2>
         
         <div className="flex justify-center mb-8">
           <div className="inline-flex rounded-lg bg-white shadow-sm p-1">
@@ -514,20 +514,20 @@ const PizzaMenu = () => {
         <div className="mt-16 text-center space-y-4">
           <button
             onClick={() => setShowAllergens(true)}
-            className="inline-flex items-center px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-full transition-colors duration-300 shadow-lg hover:shadow-xl mr-4"
+            className="inline-flex items-center px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-full transition-colors duration-300 shadow-lg hover:shadow-xl mr-4 mb-4 sm:mb-0"
           >
             <AlertTriangle className="w-5 h-5 mr-2" />
             Allergènes
           </button>
           
           <a
-            href="/assets/menu_pizza.pdf"
+            href="/assets/menu_pizza.pdf?v=2024"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-dark text-white font-semibold rounded-full transition-colors duration-300 shadow-lg hover:shadow-xl"
           >
             <FileText className="w-5 h-5 mr-2" />
-            Télécharger notre menu complet
+            Télécharger le menu Pizza du Vuache
           </a>
         </div>
 
