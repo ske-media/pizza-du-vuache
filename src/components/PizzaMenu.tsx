@@ -25,172 +25,31 @@ type MenuData = {
 const menuData: MenuData = {
   pizzas: [
     {
-      category: "Pizzas sans tomate, à la crème",
+      category: "La Mer",
       items: [
         {
-          name: "ALPAGE",
-          description: "Crème, mozzarella, champignons, oignons, pommes de terre, lard, reblochon",
-          priceNormal: "14,00 €",
-          priceGeante: "17,50 €"
+          name: "PÊCHEUR",
+          description: "Tomate, mozzarella, câpres, thon, oignons, poivrons",
+          priceNormal: "14.50 €",
+          priceGeante: "18.00 €"
         },
         {
-          name: "TARTIFLETTE",
-          description: "Crème, mozzarella, oignons, champignons, pommes de terre, lard, reblochon",
-          priceNormal: "14,00 €",
-          priceGeante: "17,50 €"
+          name: "NORDIQUE",
+          description: "Tomate, mozzarella, saumon, crème",
+          priceNormal: "15.00 €",
+          priceGeante: "19.00 €"
         },
         {
-          name: "BIANCA",
-          description: "Crème, mozzarella, champignons, speck, raclette, oignons",
-          priceNormal: "13,50 €",
-          priceGeante: "17,50 €"
+          name: "OCÉANE",
+          description: "Tomate, mozzarella, champignons, fruits de mer",
+          priceNormal: "14.50 €",
+          priceGeante: "18.00 €"
         },
         {
-          name: "FLAMMEKUECHE",
-          description: "Crème, lard, oignons",
-          priceNormal: "12,00 €",
-          priceGeante: "15,00 €"
-        }
-      ]
-    },
-    {
-      category: "Pizzas tomate + crème",
-      items: [
-        {
-          name: "ROSA",
-          description: "Tomate, crème, jambon blanc, mozzarella, oignons, huile d'olive basilic",
-          priceNormal: "14,00 €",
-          priceGeante: "17,50 €"
-        },
-        {
-          name: "ROQUEFORT",
-          description: "Tomate, crème, mozzarella, roquefort",
-          priceNormal: "13,50 €",
-          priceGeante: "17,50 €"
-        },
-        {
-          name: "HAWAÏENNE",
-          description: "Tomate, crème, champignons, jambon blanc, mozzarella, ananas",
-          priceNormal: "14,00 €",
-          priceGeante: "17,50 €"
-        },
-        {
-          name: "BORNANDINE",
-          description: "Tomate, crème, champignons, lard, reblochon",
-          priceNormal: "13,00 €",
-          priceGeante: "16,00 €"
-        },
-        {
-          name: "CARBONARA",
-          description: "Tomate, crème, mozzarella, lardons, œuf, parmesan",
-          priceNormal: "14,00 €",
-          priceGeante: "17,50 €"
-        },
-        {
-          name: "SAUMON",
-          description: "Tomate, crème, mozzarella, saumon fumé, citron",
-          priceNormal: "14,00 €",
-          priceGeante: "17,50 €"
-        }
-      ]
-    },
-    {
-      category: "Les Fromages",
-      items: [
-        {
-          name: "SAVOYARDE",
-          description: "Tomate, champignons, mozzarella, lard, œuf, reblochon",
-          priceNormal: "14,00 €",
-          priceGeante: "17,50 €"
-        },
-        {
-          name: "RACLETTE",
-          description: "Tomate, patates, speck, œuf, mozzarella, raclette, cornichons",
-          priceNormal: "14,00 €",
-          priceGeante: "17,50 €"
-        },
-        {
-          name: "SEGUIN",
-          description: "Tomate, jambon blanc, champignons, mozzarella, fromage de chèvre",
-          priceNormal: "14,00 €",
-          priceGeante: "17,50 €"
-        },
-        {
-          name: "CHÈVRE MIEL",
-          description: "Tomate, noix, mozzarella, fromage de chèvre, miel",
-          priceNormal: "14,00 €",
-          priceGeante: "17,50 €"
-        },
-        {
-          name: "AUBERGINE",
-          description: "Tomate, champignons, aubergines, mozzarella, fromage de chèvre, olives",
-          priceNormal: "14,00 €",
-          priceGeante: "17,50 €"
-        },
-        {
-          name: "AUVERGNATE",
-          description: "Tomate, jambon blanc, champignons, mozzarella, bleu d'Auvergne",
-          priceNormal: "14,00 €",
-          priceGeante: "17,50 €"
-        },
-        {
-          name: "BRIARDE",
-          description: "Tomate, jambon blanc, champignons, mozzarella, brie",
-          priceNormal: "14,00 €",
-          priceGeante: "17,50 €"
-        },
-        {
-          name: "4 FROMAGES",
-          description: "Tomate, champignons, reblochon, brie, bleu, mozzarella",
-          priceNormal: "14,00 €",
-          priceGeante: "17,50 €"
-        }
-      ]
-    },
-    {
-      category: "Les Viandes",
-      items: [
-        {
-          name: "TEXANE",
-          description: "Tomate, mozzarella, bœuf, épices, poivrons, oignons, câpres",
-          priceNormal: "14,00 €",
-          priceGeante: "17,50 €"
-        },
-        {
-          name: "FERMIÈRE",
-          description: "Tomate, champignons, mozzarella, blanc de volaille (halal), œuf, oignons",
-          priceNormal: "14,00 €",
-          priceGeante: "17,50 €"
-        },
-        {
-          name: "ORIENTALE",
-          description: "Tomate, champignons, mozzarella, oignons, poivrons, merguez (halal)",
-          priceNormal: "14,00 €",
-          priceGeante: "17,50 €"
-        },
-        {
-          name: "KEBAB",
-          description: "Tomate, mozzarella, viande de kebab extra (halal), oignons",
-          priceNormal: "14,00 €",
-          priceGeante: "17,50 €"
-        },
-        {
-          name: "ANDALOUSE",
-          description: "Tomate, champignons, mozzarella, oignons, poivrons, chorizo",
-          priceNormal: "14,00 €",
-          priceGeante: "17,50 €"
-        },
-        {
-          name: "CHÈVRIZO",
-          description: "Tomate, mozzarella, fromage de chèvre, chorizo",
-          priceNormal: "14,00 €",
-          priceGeante: "17,50 €"
-        },
-        {
-          name: "CANNIBALE",
-          description: "Tomate, mozzarella, bœuf, chorizo, merguez",
-          priceNormal: "15,00 €",
-          priceGeante: "18,00 €"
+          name: "BALTIQUE",
+          description: "Tomate, mozzarella, champignons, saumon, crevettes",
+          priceNormal: "15.00 €",
+          priceGeante: "19.00 €"
         }
       ]
     },
@@ -200,103 +59,244 @@ const menuData: MenuData = {
         {
           name: "MARGARITA",
           description: "Tomate, mozzarella",
-          priceNormal: "10,50 €",
-          priceGeante: "13,00 €"
+          priceNormal: "10.00 €",
+          priceGeante: "12.50 €"
         },
         {
           name: "NAPOLITAINE",
           description: "Tomate, anchois, mozzarella",
-          priceNormal: "11,50 €",
-          priceGeante: "14,50 €"
+          priceNormal: "11.00 €",
+          priceGeante: "14.00 €"
         },
         {
           name: "PARISIENNE",
           description: "Tomate, champignons, mozzarella",
-          priceNormal: "11,50 €",
-          priceGeante: "14,50 €"
+          priceNormal: "11.00 €",
+          priceGeante: "14.00 €"
         },
         {
           name: "JAMBON FROMAGE",
           description: "Tomate, jambon blanc, mozzarella",
-          priceNormal: "12,50 €",
-          priceGeante: "15,50 €"
+          priceNormal: "12.00 €",
+          priceGeante: "15.00 €"
         },
         {
           name: "REINE",
           description: "Tomate, jambon blanc, champignons, mozzarella",
-          priceNormal: "13,00 €",
-          priceGeante: "16,00 €"
-        },
-        {
-          name: "PARMA",
-          description: "Tomate, mozzarella, speck, olives",
-          priceNormal: "14,00 €",
-          priceGeante: "17,00 €"
-        },
-        {
-          name: "ITALIA",
-          description: "Tomate, mozzarella, parmesan, roquette, speck, tomates fraîches, huile d'olive",
-          priceNormal: "15,00 €",
-          priceGeante: "18,50 €"
-        },
-        {
-          name: "CALZONE",
-          description: "Tomate, jambon blanc, champignons, mozzarella, œuf",
-          priceNormal: "15,00 €",
-          priceGeante: "18,00 €"
+          priceNormal: "12.50 €",
+          priceGeante: "15.50 €"
         },
         {
           name: "PROVENÇALE",
-          description: "Tomate, tomate fraîche, champignons, mozzarella, oignons, poivrons, câpres, olives, anchois",
-          priceNormal: "14,00 €",
-          priceGeante: "17,00 €"
+          description: "Tomate, tomate fraîche, champignons, mozzarella, oignons, poivrons, câpres, olives, anchois, huile d'olive basilic",
+          priceNormal: "14.00 €",
+          priceGeante: "17.50 €"
         },
         {
           name: "4 SAISONS",
           description: "Tomate, mozzarella, champignons, jambon blanc, artichauts, olives",
-          priceNormal: "14,00 €",
-          priceGeante: "17,00 €"
+          priceNormal: "14.00 €",
+          priceGeante: "17.00 €"
         },
         {
           name: "BASILIC",
           description: "Tomate, mozzarella, tomates fraîches, basilic, olives, huile d'olive basilic",
-          priceNormal: "13,00 €",
-          priceGeante: "16,00 €"
+          priceNormal: "13.00 €",
+          priceGeante: "16.00 €"
         },
         {
           name: "VÉGÉTARIENNE",
           description: "Tomate, champignons, mozzarella, artichauts, poivrons, oignons, aubergines, câpres, tomates fraîches, olives, huile d'olive basilic",
-          priceNormal: "15,50 €",
-          priceGeante: "18,50 €"
+          priceNormal: "15.50 €",
+          priceGeante: "18.50 €"
+        },
+        {
+          name: "CALZONE",
+          description: "Tomate, jambon blanc, champignons, mozzarella, œuf",
+          priceNormal: "15.00 €",
+          priceGeante: "18.00 €"
+        },
+        {
+          name: "PARMA",
+          description: "Tomate, mozzarella, speck, olives",
+          priceNormal: "13.50 €",
+          priceGeante: "16.50 €"
+        },
+        {
+          name: "ITALIA",
+          description: "Tomate, mozzarella, parmesan, roquette, speck, tomates fraîches, huile d'olive",
+          priceNormal: "15.00 €",
+          priceGeante: "18.00 €"
         }
       ]
     },
     {
-      category: "La Mer",
+      category: "Les Fromages",
       items: [
         {
-          name: "PÊCHEUR",
-          description: "Tomate, mozzarella, champignons",
-          priceNormal: "12,50 €",
-          priceGeante: "15,50 €"
+          name: "4 FROMAGES",
+          description: "Tomate, champignons, reblochon, brie, bleu, mozzarella",
+          priceNormal: "14.00 €",
+          priceGeante: "17.50 €"
         },
         {
-          name: "NORDIQUE",
-          description: "Tomate, mozzarella, saumon, crème",
-          priceNormal: "12,50 €",
-          priceGeante: "16,00 €"
+          name: "AUVERGNATE",
+          description: "Tomate, jambon blanc, champignons, mozzarella, bleu d'Auvergne",
+          priceNormal: "14.00 €",
+          priceGeante: "17.50 €"
         },
         {
-          name: "OCÉANE",
-          description: "Tomate, mozzarella, champignons, fruits de mer",
-          priceNormal: "13,00 €",
-          priceGeante: "17,00 €"
+          name: "BRIARDE",
+          description: "Tomate, jambon blanc, champignons, mozzarella, brie",
+          priceNormal: "14.00 €",
+          priceGeante: "17.50 €"
         },
         {
-          name: "BALTIQUE",
-          description: "Tomate, mozzarella, champignons, saumon, crème",
-          priceNormal: "12,50 €",
-          priceGeante: "16,00 €"
+          name: "SAVOYARDE",
+          description: "Tomate, champignons, mozzarella, lard, œuf, reblochon",
+          priceNormal: "14.00 €",
+          priceGeante: "17.50 €"
+        },
+        {
+          name: "RACLETTE",
+          description: "Tomate, patates, speck, œuf, mozzarella, raclette, cornichons",
+          priceNormal: "14.00 €",
+          priceGeante: "17.50 €"
+        },
+        {
+          name: "SEGUIN",
+          description: "Tomate, jambon blanc, champignons, mozzarella, fromage de chèvre",
+          priceNormal: "14.00 €",
+          priceGeante: "17.50 €"
+        },
+        {
+          name: "CHÈVRE MIEL",
+          description: "Tomate, noix, mozzarella, fromage de chèvre, miel",
+          priceNormal: "14.00 €",
+          priceGeante: "17.50 €"
+        },
+        {
+          name: "AUBERGINE",
+          description: "Tomate, champignons, aubergines, mozzarella, fromage de chèvre, olives",
+          priceNormal: "14.00 €",
+          priceGeante: "17.50 €"
+        }
+      ]
+    },
+    {
+      category: "Les Viandes",
+      items: [
+        {
+          name: "FERMIÈRE",
+          description: "Tomate, champignons, mozzarella, blanc de volaille (halal), œuf, oignons",
+          priceNormal: "14.00 €",
+          priceGeante: "17.50 €"
+        },
+        {
+          name: "KEBAB",
+          description: "Tomate, mozzarella, viande de kebab extra (halal), oignons",
+          priceNormal: "14.00 €",
+          priceGeante: "17.50 €"
+        },
+        {
+          name: "ANDALOUSE",
+          description: "Tomate, champignons, mozzarella, oignons, poivrons, chorizo",
+          priceNormal: "14.00 €",
+          priceGeante: "17.50 €"
+        },
+        {
+          name: "CHÈVRIZO",
+          description: "Tomate, mozzarella, fromage de chèvre, chorizo",
+          priceNormal: "13.50 €",
+          priceGeante: "17.00 €"
+        },
+        {
+          name: "CANNIBALE",
+          description: "Tomate, mozzarella, bœuf, chorizo, merguez",
+          priceNormal: "15.00 €",
+          priceGeante: "18.00 €"
+        },
+        {
+          name: "TEXANE",
+          description: "Tomate, mozzarella, bœuf, poivrons, oignons, câpres",
+          priceNormal: "14.00 €",
+          priceGeante: "17.50 €"
+        },
+        {
+          name: "ORIENTALE",
+          description: "Tomate, champignons, mozarella, oignons, poivrons, merguez (halal)",
+          priceNormal: "14.00 €",
+          priceGeante: "17.50 €"
+        }
+      ]
+    },
+    {
+      category: "Pizza Crème, sans tomate",
+      items: [
+        {
+          name: "FLAMMENKUECHE",
+          description: "Crème, lardons, oignons",
+          priceNormal: "13.50 €",
+          priceGeante: "16.00 €"
+        },
+        {
+          name: "TARTIFLETTE",
+          description: "Crème, mozzarella, oignons, pommes de terre, lardons, reblochon",
+          priceNormal: "14.00 €",
+          priceGeante: "17.50 €"
+        },
+        {
+          name: "ALPAGE",
+          description: "Crème, mozzarella, oignons, pommes de terre, diots, reblochon",
+          priceNormal: "14.00 €",
+          priceGeante: "17.50 €"
+        },
+        {
+          name: "BIANCA",
+          description: "Crème, mozzarella, champignons, speck, raclette, oignons",
+          priceNormal: "14.00 €",
+          priceGeante: "17.50 €"
+        }
+      ]
+    },
+    {
+      category: "Pizza Tomate + Crème",
+      items: [
+        {
+          name: "BORNANDINE",
+          description: "Tomate, crème, mozzarella, lard, reblochon",
+          priceNormal: "14.00 €",
+          priceGeante: "17.50 €"
+        },
+        {
+          name: "ROSA",
+          description: "Tomate, crème, jambon blanc, mozzarella, oignons, huile d'olive basilic",
+          priceNormal: "14.00 €",
+          priceGeante: "17.00 €"
+        },
+        {
+          name: "ROQUEFORT",
+          description: "Tomate, crème, mozzarella, roquefort",
+          priceNormal: "14.00 €",
+          priceGeante: "17.50 €"
+        },
+        {
+          name: "HAWAÏENNE",
+          description: "Tomate, crème, champignons, jambon blanc, mozzarella, ananas",
+          priceNormal: "14.00 €",
+          priceGeante: "17.50 €"
+        },
+        {
+          name: "ALSACIENNE",
+          description: "Tomate, crème, lard, oignons, mozzarella",
+          priceNormal: "14.00 €",
+          priceGeante: "17.50 €"
+        },
+        {
+          name: "VUACHE",
+          description: "Tomate, crème, mozzarella, jambon blanc, reblochon",
+          priceNormal: "14.00 €",
+          priceGeante: "17.50 €"
         }
       ]
     }

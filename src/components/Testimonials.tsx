@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, Quote } from 'lucide-react';
+import { Star, Quote, MessageCircle } from 'lucide-react';
 
 const testimonials = [
   {
@@ -90,8 +90,7 @@ const Testimonials: React.FC = () => {
                         {[...Array(testimonial.rating)].map((_, i) => (
                           <Star
                             key={i}
-                            className="w-5 h-5 text-yellow-400"
-                            fill="currentColor"
+                            className="w-5 h-5 text-yellow-400 fill-current"
                           />
                         ))}
                       </div>
@@ -105,7 +104,7 @@ const Testimonials: React.FC = () => {
                       </div>
                     </div>
 
-                    <Quote className="w-10 h-10 text-primary/20 mb-4" />
+                    <MessageCircle className="w-10 h-10 text-primary/20 mb-4" />
                     
                     <p className="text-gray-700 text-lg mb-6 italic">
                       "{testimonial.text}"
