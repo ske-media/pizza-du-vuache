@@ -96,8 +96,8 @@ const Testimonials: React.FC = () => {
                       </div>
                       <div className="flex items-center text-gray-500 text-sm">
                         <img
-                          src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-                          alt="Google Logo"
+                          src="https://www.svgrepo.com/show/508186/star-circle.svg"
+                          alt="Étoile"
                           className="w-4 h-4 mr-2"
                         />
                         {testimonial.date}
@@ -148,8 +148,8 @@ const Testimonials: React.FC = () => {
         <div className="mt-12 text-center">
           <div className="inline-flex items-center space-x-2 bg-white px-6 py-3 rounded-full shadow-md">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-              alt="Google Logo"
+              src="https://www.svgrepo.com/show/508186/star-circle.svg"
+              alt="Étoile"
               className="w-5 h-5"
             />
             <span className="font-semibold text-gray-700">Note moyenne de 4,5/5 sur Google</span>
