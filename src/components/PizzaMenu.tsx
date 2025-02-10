@@ -350,6 +350,8 @@ const PizzaMenu: React.FC = () => {
   const [activePizzaCategory, setActivePizzaCategory] = React.useState(menuData.pizzas[0].category);
   const [showAllergens, setShowAllergens] = React.useState(false);
 
+  const isMobile = window.innerWidth < 768;
+
   const PizzaCard = ({ pizza }: { pizza: MenuItem }) => (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden">
       <div className="p-6">
@@ -432,6 +434,27 @@ const PizzaMenu: React.FC = () => {
   );
 
   const renderPizzas = () => {
+    if (isMobile) {
+      return (
+        <>
+          {menuData.pizzas.map((category, categoryIndex) => (
+            <div key={`${category.category}-${categoryIndex}`} className="fade-in">
+              <div className="sticky top-16 z-10 bg-gray-50 py-4 -mx-4 px-4 mb-6">
+                <h3 className="text-2xl font-bold text-primary text-center">
+                  {category.category}
+                </h3>
+              </div>
+              <div className="grid gap-4">
+                {category.items.map((pizza, index) => (
+                  <PizzaCard key={`${pizza.name}-${index}`} pizza={pizza} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </>
+      );
+    }
+
     const categoryData = menuData.pizzas.find(cat => cat.category === activePizzaCategory);
     
     if (!categoryData) {
@@ -491,7 +514,7 @@ const PizzaMenu: React.FC = () => {
 
         {activeTab === 'pizzas' && (
           <div className="mb-8 overflow-x-auto scrollbar-hide">
-            <div className="flex flex-nowrap justify-start md:justify-center gap-2 pb-2">
+            <div className={`${isMobile ? 'hidden' : 'flex'} flex-nowrap justify-start md:justify-center gap-2 pb-2`}>
               {menuData.pizzas.map((category, index) => (
                 <button
                   key={`${category.category}-${index}`}
@@ -509,7 +532,7 @@ const PizzaMenu: React.FC = () => {
           </div>
         )}
 
-        <div className="mt-8">
+        <div className={`mt-8 ${isMobile && activeTab === 'pizzas' ? 'space-y-12' : ''}`}>
           {activeTab === 'pizzas' ? renderPizzas() : renderBoissonsEtDesserts()}
         </div>
 
