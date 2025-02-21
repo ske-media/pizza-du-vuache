@@ -1,5 +1,5 @@
-import React from 'react';
-import { Star, Quote, MessageCircle } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Star, Quote } from 'lucide-react';
 
 const testimonials = [
   {
@@ -39,11 +39,11 @@ const testimonials = [
   }
 ];
 
-const Testimonials: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = React.useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = React.useState(true);
+const Testimonials = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  React.useEffect(() => {
+  useEffect(() => {
     let timer: NodeJS.Timeout;
     if (isAutoPlaying) {
       timer = setInterval(() => {
@@ -63,10 +63,10 @@ const Testimonials: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-primary mb-4">
-            Avis clients Pizza du Vuache
+            L'avis de nos clients
           </h2>
           <p className="text-gray-600 text-lg">
-            Découvrez ce que nos clients pensent de Pizza du Vuache sur Google
+            Découvrez ce que nos clients pensent de nous sur Google
           </p>
         </div>
 
@@ -90,21 +90,22 @@ const Testimonials: React.FC = () => {
                         {[...Array(testimonial.rating)].map((_, i) => (
                           <Star
                             key={i}
-                            className="w-5 h-5 text-yellow-400 fill-current"
+                            className="w-5 h-5 text-yellow-400"
+                            fill="currentColor"
                           />
                         ))}
                       </div>
                       <div className="flex items-center text-gray-500 text-sm">
                         <img
-                          src="https://www.svgrepo.com/show/508186/star-circle.svg"
-                          alt="Étoile"
+                          src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                          alt="Google Logo"
                           className="w-4 h-4 mr-2"
                         />
                         {testimonial.date}
                       </div>
                     </div>
 
-                    <MessageCircle className="w-10 h-10 text-primary/20 mb-4" />
+                    <Quote className="w-10 h-10 text-primary/20 mb-4" />
                     
                     <p className="text-gray-700 text-lg mb-6 italic">
                       "{testimonial.text}"
@@ -148,8 +149,8 @@ const Testimonials: React.FC = () => {
         <div className="mt-12 text-center">
           <div className="inline-flex items-center space-x-2 bg-white px-6 py-3 rounded-full shadow-md">
             <img
-              src="https://www.svgrepo.com/show/508186/star-circle.svg"
-              alt="Étoile"
+              src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+              alt="Google Logo"
               className="w-5 h-5"
             />
             <span className="font-semibold text-gray-700">Note moyenne de 4,5/5 sur Google</span>

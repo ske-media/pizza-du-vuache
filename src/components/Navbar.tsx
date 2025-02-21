@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Phone } from 'lucide-react';
 
-const Navbar: React.FC = () => {
-  const [isScrolled, setIsScrolled] = React.useState(false);
+const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
   const handleNavClick = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      const navbarHeight = 64;
+      const navbarHeight = 64; // 4rem
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
 
@@ -44,13 +44,14 @@ const Navbar: React.FC = () => {
           <div className="flex items-center">
             <a href="#hero" className="flex items-center" onClick={() => handleNavClick('#hero')}>
               <img 
-                src={isScrolled ? "https://i.imgur.com/D2JqL5t.png" : "https://i.imgur.com/2N5Sr9x.png"} 
+                src={isScrolled ? "/assets/logo_green.png" : "/assets/logo_white.png"} 
                 alt="Pizza du Vuache" 
                 className="h-10 sm:h-12 w-auto transition-all duration-300"
               />
             </a>
           </div>
 
+          {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <a
@@ -76,6 +77,7 @@ const Navbar: React.FC = () => {
             </a>
           </div>
 
+          {/* Mobile call button */}
           <div className="md:hidden flex items-center">
             <a
               href="tel:+33450386798"

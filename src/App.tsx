@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -10,7 +10,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
-  React.useEffect(() => {
+  useEffect(() => {
     const observerCallback: IntersectionObserverCallback = (entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -41,8 +41,8 @@ function App() {
         <PizzaSizes />
         <Testimonials />
         <Contact />
-        <Footer />
       </main>
+      <Footer />
     </div>
   );
 }

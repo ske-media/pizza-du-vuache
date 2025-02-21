@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Clock, ChefHat, Flame, Sparkles, Timer } from 'lucide-react';
 
 const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80";
 
-const Distributor: React.FC = () => {
-  const [imageError, setImageError] = React.useState(false);
+const Distributor = () => {
+  const [imageError, setImageError] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
+    // Précharger l'image pour vérifier qu'elle existe
     const img = new Image();
-    img.src = 'https://i.imgur.com/6xbWpMU.jpeg';
+    img.src = '/assets/andalouse.avif';
     img.onerror = () => setImageError(true);
   }, []);
 
@@ -20,7 +21,7 @@ const Distributor: React.FC = () => {
             Notre Distributeur Automatique
           </h2>
           <p className="text-xl text-gray-600">
-            Pizza du Vuache disponible 24h/24 à Valleiry ! 🍕
+            La même qualité, où que vous soyez ! 🍕
           </p>
         </div>
 
@@ -28,8 +29,11 @@ const Distributor: React.FC = () => {
           <div className="fade-in">
             <img
               key={imageError ? 'fallback' : 'main'}
-              src={imageError ? FALLBACK_IMAGE : "https://i.imgur.com/6xbWpMU.jpeg"}
-              onError={() => setImageError(true)}
+              src={imageError ? FALLBACK_IMAGE : "/assets/andalouse.avif"}
+              onError={(e) => {
+                console.error('Erreur de chargement de l\'image:', e);
+                setImageError(true);
+              }}
               alt="Distributeur de pizzas"
               className="rounded-xl shadow-2xl w-full object-cover aspect-[4/3]"
             />
@@ -43,7 +47,7 @@ const Distributor: React.FC = () => {
               <div>
                 <h3 className="text-xl font-semibold text-primary mb-2">Un savoir-faire maison</h3>
                 <p className="text-gray-600">
-                  Chaque pizza est élaborée à la main dans l'atelier de Pizza du Vuache, avec amour et passion, 
+                  Chaque pizza est élaborée à la main dans notre atelier, avec amour et passion, 
                   comme si vous la commandiez directement au comptoir.
                 </p>
               </div>
@@ -95,7 +99,7 @@ const Distributor: React.FC = () => {
               La différence Pizza du Vuache
             </h3>
             <p className="text-gray-700 text-lg mb-8">
-              Les pizzas du distributeur Pizza du Vuache ne sont pas "juste des pizzas". 
+              Nos pizzas du distributeur ne sont pas "juste des pizzas". 
               Elles sont une expérience, le résultat de notre passion pour la bonne cuisine. 
               Goûtez la différence et laissez-vous séduire !
             </p>

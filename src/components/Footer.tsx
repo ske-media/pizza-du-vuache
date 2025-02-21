@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Pizza du Vuache</h3>
             <p className="text-gray-300">
-              Une expérience culinaire authentique qui allie tradition italienne et saveurs locales, nichée au pied du Vuache.
+              Une expérience culinaire authentique au pied du Mont Vuache.
             </p>
           </div>
           
