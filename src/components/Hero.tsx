@@ -15,7 +15,7 @@ const Hero = () => {
       
       <div className="relative z-10 text-center px-4 sm:px-6 fade-in max-w-[90vw] sm:max-w-none">
         <img 
-          src="/assets/logo_white.png" 
+          src="https://i.imgur.com/xPMGsJJ.png" 
           alt="Pizza du Vuache" 
           className="h-20 sm:h-32 mx-auto mb-6 w-auto object-contain"
         />
@@ -32,7 +32,7 @@ const Hero = () => {
               COMMANDER
             </a>
             <a
-              href="/assets/menu_pizza.pdf"
+              href="./assets/menu_pizza.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-full transition-colors duration-300 text-base sm:text-lg shadow-lg hover:shadow-xl"

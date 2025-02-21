@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Clock, ChefHat, Flame, Sparkles, Timer } from 'lucide-react';
 
-const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80";
+const FALLBACK_IMAGE = "https://i.imgur.com/HzohscN.jpeg";
 
 const Distributor = () => {
   const [imageError, setImageError] = useState(false);
@@ -9,7 +9,7 @@ const Distributor = () => {
   useEffect(() => {
     // Précharger l'image pour vérifier qu'elle existe
     const img = new Image();
-    img.src = '/assets/andalouse.avif';
+    img.src = 'https://i.imgur.com/HzohscN.jpeg';
     img.onerror = () => setImageError(true);
   }, []);
 
@@ -29,7 +29,7 @@ const Distributor = () => {
           <div className="fade-in">
             <img
               key={imageError ? 'fallback' : 'main'}
-              src={imageError ? FALLBACK_IMAGE : "/assets/andalouse.avif"}
+              src={imageError ? FALLBACK_IMAGE : "https://i.imgur.com/HzohscN.jpeg"}
               onError={(e) => {
                 console.error('Erreur de chargement de l\'image:', e);
                 setImageError(true);

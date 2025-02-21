@@ -97,9 +97,10 @@ const Testimonials = () => {
                       </div>
                       <div className="flex items-center text-gray-500 text-sm">
                         <img
-                          src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-                          alt="Google Logo"
+                         src="https://www.svgrepo.com/show/533052/star.svg"
+                         alt="Star"
                           className="w-4 h-4 mr-2"
+                         style={{ filter: 'invert(27%) sepia(15%) saturate(1309%) hue-rotate(84deg) brightness(94%) contrast(88%)' }}
                         />
                         {testimonial.date}
                       </div>
@@ -149,9 +150,10 @@ const Testimonials = () => {
         <div className="mt-12 text-center">
           <div className="inline-flex items-center space-x-2 bg-white px-6 py-3 rounded-full shadow-md">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-              alt="Google Logo"
+              src="https://www.svgrepo.com/show/533052/star.svg"
+              alt="Star"
               className="w-5 h-5"
+              style={{ filter: 'invert(27%) sepia(15%) saturate(1309%) hue-rotate(84deg) brightness(94%) contrast(88%)' }}
             />
             <span className="font-semibold text-gray-700">Note moyenne de 4,5/5 sur Google</span>
           </div>

@@ -44,7 +44,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <a href="#hero" className="flex items-center" onClick={() => handleNavClick('#hero')}>
               <img 
-                src={isScrolled ? "/assets/logo_green.png" : "/assets/logo_white.png"} 
+                src={isScrolled ? "https://i.imgur.com/iDzEZai.png" : "https://i.imgur.com/xPMGsJJ.png"} 
                 alt="Pizza du Vuache" 
                 className="h-10 sm:h-12 w-auto transition-all duration-300"
               />
