@@ -526,7 +526,7 @@ const PizzaMenu = () => {
           </button>
           
           <a
-            href="https://res.cloudinary.com/dqiw4mphp/image/upload/v1740133217/menu_pizza_dmhiig.pdf"
+            href="https://res.cloudinary.com/agence-orbit/image/upload/menu_pizza_dmhiig.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-dark text-white font-semibold rounded-full transition-colors duration-300 shadow-lg hover:shadow-xl"
