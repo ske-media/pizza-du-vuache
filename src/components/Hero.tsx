@@ -31,8 +31,8 @@ const Hero = () => {
               <Phone className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
               COMMANDER
             </a>
-            <a
-              href="./assets/menu_pizza.pdf"
+            <a 
+              href="https://res.cloudinary.com/dqiw4mphp/image/upload/v1740133217/menu_pizza_dmhiig.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-full transition-colors duration-300 text-base sm:text-lg shadow-lg hover:shadow-xl"
