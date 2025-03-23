@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -8,8 +9,9 @@ import PizzaMenu from './components/PizzaMenu';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ReseauxPage from './pages/ReseauxPage';
 
-function App() {
+const MainLayout = () => {
   useEffect(() => {
     const observerCallback: IntersectionObserverCallback = (entries) => {
       entries.forEach(entry => {
@@ -44,6 +46,17 @@ function App() {
       </main>
       <Footer />
     </div>
+  );
+};
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainLayout />} />
+        <Route path="/reseaux" element={<ReseauxPage />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -52,7 +52,9 @@ const Footer = () => {
                 <Facebook size={24} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/pizzaduvuache/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors"
                 aria-label="Instagram"
               >
