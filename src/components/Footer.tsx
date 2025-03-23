@@ -65,7 +65,17 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; {new Date().getFullYear()} Pizza du Vuache. Tous droits réservés.</p>
+          <p className="footer-copyright">
+            © 2012-{new Date().getFullYear()} by Pizza du Vuache | 🚀 Site web développé par 
+            <a 
+              href="https://agence-orbit.ch/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="ml-1 text-secondary-light hover:text-white transition-colors"
+            >
+              Steven C. K. ELDRING – Agence Orbit
+            </a>
+          </p>
         </div>
       </div>
     </footer>
